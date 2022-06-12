@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+:root{
+    --color-primary: #364c96;
+    --color-secondary: #ff8496;
+    --color-yellow:#ffc9a5;
+}
+body{
+    font-family: 'Ubuntu', sans-serif;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+nav{
+    background-color: var(--color-primary);
+    color: var(--color-yellow);
+    padding: 20px;
+    margin: auto;
+    margin-top: 20px;
+    border-radius: 5px;
+    width: 90%;
+    font-weight: bolder;
+    font-size: 25px;
+    text-align: center;
+    font-family: 'poppins', sans-serif;
+}
+nav ul{
+    list-style: none;
+}
+.gameContainer{
+ 
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+.line{
+    background-color: red;
+    height: 3px;
+    width: 0;
+    position: absolute;
+    transition: width 1s ease-in-out;
+}
+.container{
+    position: relative;
+    display: grid;
+    font-family: 'ubuntu', sans-serif;
+    grid-template-columns: repeat(3,7vw);
+    grid-template-rows: repeat(3,7vw);
+}
+.container div{
+    font-size: 6vw;
+}
+.box{
+    border: 2px solid var(--color-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box:hover{
+    background-color: var(--color-yellow);
+    cursor: pointer;
+}
+.gameInfo{
+    padding: 34px;
+}
+.imgBox img{
+    width: 0;
+    transition: width 1s ease-in-out;
+}
+.br-0{
+    border-right: 0;
+}
+.bl-0{
+    border-left: 0;
+}
+.bt-0{
+    border-top: 0;
+}
+.bb-0{
+    border-bottom: 0;
+}
+.info{
+    font-weight: 900;
+}
+#reset {
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
+    padding: 6px;
+    border-radius: 5px;
+    font-size: 17px;
+    font-family: 'poppins', sans-serif;
+    cursor: pointer;
+    border: none;
+    width: 24%;
+    font-weight: 900;
+    margin-left: 10px;
+}
+#reset:hover{
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
+    transition: .5s ease-in-out;
+}
+.turnInfo{
+    margin-top: 10px;
+}
+@media screen and (max-width:800px){
+    .gameContainer {
+        flex-direction: column;
+        align-items: center;
+    }
+    .turnInfo{
+        text-align: center;
+    }
+    .imgBox{
+        text-align: center;
+    }
+}
